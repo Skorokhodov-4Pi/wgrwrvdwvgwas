@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CRBModelContainer" CdmEntityContainer="CRBEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="CRBModel.Departments">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+          <ScalarProperty Name="name_departments" ColumnName="name_departments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Electronic_medical_card">
+      <EntityTypeMapping TypeName="CRBModel.Electronic_medical_card">
+        <MappingFragment StoreEntitySet="Electronic_medical_card">
+          <ScalarProperty Name="id_case" ColumnName="id_case" />
+          <ScalarProperty Name="id_patient" ColumnName="id_patient" />
+          <ScalarProperty Name="date_receipt" ColumnName="date_receipt" />
+          <ScalarProperty Name="date_discharge" ColumnName="date_discharge" />
+          <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+          <ScalarProperty Name="id_doctor" ColumnName="id_doctor" />
+          <ScalarProperty Name="id_outcomes" ColumnName="id_outcomes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MKB">
+      <EntityTypeMapping TypeName="CRBModel.MKB">
+        <MappingFragment StoreEntitySet="MKB">
+          <ScalarProperty Name="kod_diagnosis" ColumnName="kod_diagnosis" />
+          <ScalarProperty Name="name_diagnosis" ColumnName="name_diagnosis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OMS_policy">
+      <EntityTypeMapping TypeName="CRBModel.OMS_policy">
+        <MappingFragment StoreEntitySet="OMS_policy">
+          <ScalarProperty Name="id_OMS" ColumnName="id_OMS" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="insurance_company" ColumnName="insurance_company" />
+          <ScalarProperty Name="policy_number" ColumnName="policy_number" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outcomes">
+      <EntityTypeMapping TypeName="CRBModel.Outcomes">
+        <MappingFragment StoreEntitySet="Outcomes">
+          <ScalarProperty Name="id_outcomes" ColumnName="id_outcomes" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patient">
+      <EntityTypeMapping TypeName="CRBModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="id_patient" ColumnName="id_patient" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+          <ScalarProperty Name="actual_address" ColumnName="actual_address" />
+          <ScalarProperty Name="registered_address" ColumnName="registered_address" />
+          <ScalarProperty Name="id_OMS_policy" ColumnName="id_OMS_policy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="CRBModel.Positions">
+        <MappingFragment StoreEntitySet="Positions">
+          <ScalarProperty Name="id_position" ColumnName="id_position" />
+          <ScalarProperty Name="name_position" ColumnName="name_position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="CRBModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+          <ScalarProperty Name="name_role" ColumnName="name_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="CRBModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="id_staff" ColumnName="id_staff" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+          <ScalarProperty Name="actual_address" ColumnName="actual_address" />
+          <ScalarProperty Name="registered_address" ColumnName="registered_address" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+          <ScalarProperty Name="id_position" ColumnName="id_position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CRBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CRBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="id_staff" ColumnName="id_staff" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MKB_Electronic_medical_card" TypeName="CRBModel.MKB_Electronic_medical_card" StoreEntitySet="MKB_Electronic_medical_card">
+      <EndProperty Name="Electronic_medical_card">
+        <ScalarProperty Name="id_case" ColumnName="id_case" />
+      </EndProperty>
+      <EndProperty Name="MKB">
+        <ScalarProperty Name="kod_diagnosis" ColumnName="kod_diagnosis" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

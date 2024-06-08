@@ -1,0 +1,172 @@
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\CRB.mdf
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\CRB_log.ldf
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\CRB.exe.config
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\CRB.exe
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\CRB.pdb
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\EntityFramework.dll
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\EntityFramework.xml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.AssemblyReference.cache
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\MainWindow.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\App.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB_Content.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.cache
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.lref
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\MainWindow.baml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.baml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.g.resources
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.Properties.Resources.resources
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.GenerateResource.cache
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CopyComplete
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.exe
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\CRB.pdb
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\App.baml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.baml
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.g.cs
+C:\Users\Denis\Desktop\ПРАКТИКА ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.mdf
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB_log.ldf
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe.config
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.pdb
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.dll
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.xml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.AssemblyReference.cache
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\App.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_Content.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.cache
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.lref
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\App.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.g.resources
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.Properties.Resources.resources
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.GenerateResource.cache
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CopyComplete
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.exe
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.pdb
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\CRB.mdf
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\CRB_log.ldf
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\CRB.exe.config
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\CRB.exe
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\CRB.pdb
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\EntityFramework.dll
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\EntityFramework.xml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.csproj.AssemblyReference.cache
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\MainWindow.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Avtoris.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Avtoris2.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Uchet.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\App.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB_Content.g.cs
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB_MarkupCompile.cache
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB_MarkupCompile.lref
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\App.baml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\MainWindow.baml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Avtoris.baml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Avtoris2.baml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\Pages\Uchet.baml
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.g.resources
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.Properties.Resources.resources
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.csproj.GenerateResource.cache
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.csproj.CopyComplete
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.exe
+C:\Users\Denis\Desktop\CRB_app edit\CRB\CRB\obj\Debug\CRB.pdb
+C:\Users\Denis\Desktop\Практика ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.g.cs
+C:\Users\Denis\Desktop\Практика ЦРБ\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.mdf
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB_log.ldf
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe.config
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.pdb
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.dll
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.xml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.SuggestedBindingRedirects.cache
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\App.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_Content.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.cache
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.lref
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\App.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.baml
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.g.resources
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.Properties.Resources.resources
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.GenerateResource.cache
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CopyComplete
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.exe
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.pdb
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.g.cs
+C:\Users\student\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.mdf
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB_log.ldf
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe.config
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.exe
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\CRB.pdb
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.dll
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.xml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.AssemblyReference.cache
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.SuggestedBindingRedirects.cache
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\App.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_Content.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.cache
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB_MarkupCompile.lref
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\App.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\MainWindow.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Avtoris2.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\Uchet.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.baml
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.g.resources
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.Properties.Resources.resources
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.GenerateResource.cache
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.CopyComplete
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.exe
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.pdb
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.g.cs
+C:\Users\1\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.g.cs
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\EditMKB.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\Pages\UchetEdit.baml
+C:\Users\Denis\Desktop\CRB_app\CRB\CRB\obj\Debug\CRB.csproj.ResolveComReference.cache

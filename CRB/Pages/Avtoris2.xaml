@@ -1,0 +1,121 @@
+﻿<Page x:Class="CRB.Pages.Avtoris2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CRB.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="Avtoris2"
+      Background="Transparent"
+      >
+
+    <Border CornerRadius="0">
+        <Border.Background>
+            <ImageBrush ImageSource="/Resources/backgr.jpg"/>
+        </Border.Background>
+        <Border CornerRadius="0"
+        BorderThickness="5"
+        Opacity="0.85">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#057ab8" Offset="0"/>
+                    <GradientStop Color="#02b66a" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#057ab8" Offset="0"/>
+                    <GradientStop Color="#02b66a" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel VerticalAlignment="Center">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Width="250"
+                        Grid.Row="2"
+                        Orientation="Vertical"
+                        >
+                    <Image Source="/Resources/CRB.png" Width="100" Height="100"/>
+                    <TextBlock Text="ВХОД"
+                           Foreground="White"
+                           FontSize="25"
+                           FontFamily="Alegreya"
+                           HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="TxtBlockMessage" Text="Неверный логин/пароль" Foreground="Red" FontFamily="Alegreya" TextAlignment="Center" Margin="5" Visibility="Collapsed"/>
+                        <TextBlock Text="Логин"
+                           Foreground="White"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Alegreya"
+                           Margin="0,35,0,0"/>
+
+                    <TextBox x:Name="LoginUser"
+                         FontSize="13"
+                         FontWeight="Medium"
+                         FontFamily="Alegreya"
+                         Background="Transparent"
+                         Foreground="White"
+                         CaretBrush="LightGray"
+                         BorderBrush="#FF04804C"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                         Text="admin"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,0,0"/>
+
+                    <TextBlock Text="Пароль"
+                         Foreground="White"
+                         FontSize="12"
+                         FontWeight="Medium"
+                         FontFamily="Alegreya"
+                         Margin="0,35,0,0"/>
+
+                    <PasswordBox x:Name="PasswordUser"
+                         FontSize="13"
+                         FontWeight="Medium"
+                         FontFamily="Alegreya"
+                         Background="Transparent"
+                         Foreground="White"
+                         CaretBrush="LightGray"
+                         BorderBrush="#FF04804C"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                         Password="admin"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,0,0"/>
+                        <StackPanel x:Name="CaptchaStack" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock x:Name="CaptchaTxt1" FontSize="25" TextDecorations="Strikethrough" Foreground="Red" FontWeight="Heavy" FontStretch="UltraCondensed" MouseDown="CaptchaTxt1_MouseDown"/>
+                                <TextBlock x:Name="CaptchaTxt2" FontSize="25" TextDecorations="Strikethrough" Foreground="Red" FontWeight="Heavy" FontStretch="UltraCondensed" MouseDown="CaptchaTxt1_MouseDown"/>
+                                <TextBlock x:Name="CaptchaTxt3" FontSize="25" TextDecorations="Strikethrough" Foreground="Red" FontWeight="Heavy" FontStretch="UltraCondensed" MouseDown="CaptchaTxt1_MouseDown"/>
+                                <TextBlock x:Name="CaptchaTxt4" FontSize="25" TextDecorations="Strikethrough" Foreground="Red" FontWeight="Heavy" FontStretch="UltraCondensed" MouseDown="CaptchaTxt1_MouseDown"/>
+                            </StackPanel>
+                            <TextBox x:Name="EnterCapTxt" Margin="5"/>
+                        </StackPanel>
+                        <Button IsDefault="True" x:Name="btnVhod" 
+                         Content="Вход"
+                         Cursor="Hand"
+                         Grid.Column="2"
+                         Click="BtnVhod_Click"
+                         Margin="0,50,0,0"
+                         Height="40"
+                         Width="150"/>
+                    </StackPanel>
+
+
+            </Grid>
+            </StackPanel>
+        </Border>
+    </Border>
+</Page>

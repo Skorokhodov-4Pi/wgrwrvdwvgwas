@@ -1,0 +1,33 @@
+﻿<Page x:Class="CRB.Pages.AddBedsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CRB.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddBedsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Палата: " VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="44" Margin="10"/>
+        <TextBlock Text="Тип палаты: " VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="1" Height="16" Width="68" Margin="10"/>
+        <TextBlock Text="Кол-во коек: " VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Height="16" Width="100" Margin="10"/>
+
+        <ComboBox IsEditable="True" SelectedItem="{Binding hospital_rooms}" DisplayMemberPath="id_room"  x:Name="RoomCmb" Height="25" Width="670" Margin="90,0,40,0"/>
+        <ComboBox SelectedIndex="0" x:Name="GendreCmb" Grid.Row="1" Height="25" Width="670" Margin="90,0,40,0"/>
+        <TextBox Name="CountBedsTxt" Grid.Row="2" Height="25" Width="670" Margin="90,44,40,44"/>
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="42" Width="420">
+            <Button Name="AddBedBtn" Click="AddBedBtn_Click" Width="200" Content="Добавить палату/койки" Margin="5"/>
+            <Button x:Name="cancel" Click="cancel_Click" Width="200" Content="Отмена" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Page>

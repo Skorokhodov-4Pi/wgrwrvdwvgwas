@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fab2fd3f1b1649f3978c520bef948d28" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="CRBModel.beds" Width="1.5" PointX="9.625" PointY="6.375" />
+        <EntityTypeShape EntityType="CRBModel.Departments" Width="1.5" PointX="3.75" PointY="7.125" />
+        <EntityTypeShape EntityType="CRBModel.Electronic_medical_card" Width="1.5" PointX="6" PointY="2.875" />
+        <EntityTypeShape EntityType="CRBModel.hospital_rooms" Width="1.5" PointX="8.125" PointY="9" />
+        <EntityTypeShape EntityType="CRBModel.MKB" Width="1.5" PointX="8.25" PointY="3.75" />
+        <EntityTypeShape EntityType="CRBModel.OMS_policy" Width="1.5" PointX="3" PointY="3.25" />
+        <EntityTypeShape EntityType="CRBModel.Outcomes" Width="1.5" PointX="3.75" PointY="9.625" />
+        <EntityTypeShape EntityType="CRBModel.Patient" Width="1.5" PointX="0.75" PointY="2.875" />
+        <EntityTypeShape EntityType="CRBModel.Positions" Width="1.5" PointX="1.5" PointY="13.375" />
+        <EntityTypeShape EntityType="CRBModel.Staff" Width="1.5" PointX="3.75" PointY="12" />
+        <EntityTypeShape EntityType="CRBModel.OtchetPost2024" Width="1.5" PointX="0.75" PointY="7.75" />
+        <AssociationConnector Association="CRBModel.FK_beds_hospital_rooms" />
+        <AssociationConnector Association="CRBModel.FK_Electronic_medical_card_Departments" />
+        <AssociationConnector Association="CRBModel.FK_Staff_Departments" />
+        <AssociationConnector Association="CRBModel.FK_Electronic_medical_card_Outcomes" />
+        <AssociationConnector Association="CRBModel.FK_Electronic_medical_card_Patient" />
+        <AssociationConnector Association="CRBModel.FK_Electronic_medical_card_Staff" />
+        <AssociationConnector Association="CRBModel.FK_OMS_policy_Patient" />
+        <AssociationConnector Association="CRBModel.FK_Staff_Positions" />
+        <AssociationConnector Association="CRBModel.MKB_Electronic_medical_card" />
+        <AssociationConnector Association="CRBModel.FK_Electronic_medical_card_beds" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

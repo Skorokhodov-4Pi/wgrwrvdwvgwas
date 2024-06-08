@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище CRBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="beds">
+          <Key>
+            <PropertyRef Name="id_bed" />
+          </Key>
+          <Property Name="id_bed" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="num_bed" Type="int" Nullable="false" />
+          <Property Name="status_bed" Type="nvarchar(max)" />
+          <Property Name="id_room" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="id_departments" />
+          </Key>
+          <Property Name="id_departments" Type="int" Nullable="false" />
+          <Property Name="name_departments" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Electronic_medical_card">
+          <Key>
+            <PropertyRef Name="id_case" />
+          </Key>
+          <Property Name="id_case" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_patient" Type="int" Nullable="false" />
+          <Property Name="date_receipt" Type="date" Nullable="false" />
+          <Property Name="date_discharge" Type="date" />
+          <Property Name="id_departments" Type="int" />
+          <Property Name="id_doctor" Type="int" Nullable="false" />
+          <Property Name="id_outcomes" Type="int" />
+          <Property Name="id_bed" Type="int" />
+        </EntityType>
+        <EntityType Name="hospital_rooms">
+          <Key>
+            <PropertyRef Name="id_room" />
+          </Key>
+          <Property Name="id_room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type_room" Type="nvarchar" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MKB">
+          <Key>
+            <PropertyRef Name="kod_diagnosis" />
+          </Key>
+          <Property Name="kod_diagnosis" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="name_diagnosis" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MKB_Electronic_medical_card">
+          <Key>
+            <PropertyRef Name="id_case" />
+            <PropertyRef Name="kod_diagnosis" />
+          </Key>
+          <Property Name="id_case" Type="int" Nullable="false" />
+          <Property Name="kod_diagnosis" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OMS_policy">
+          <Key>
+            <PropertyRef Name="id_OMS" />
+          </Key>
+          <Property Name="id_OMS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="region" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="insurance_company" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="policy_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="end_date" Type="date" Nullable="false" />
+          <Property Name="id_patient" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Outcomes">
+          <Key>
+            <PropertyRef Name="id_outcomes" />
+          </Key>
+          <Property Name="id_outcomes" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="id_patient" />
+          </Key>
+          <Property Name="id_patient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="First_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="date_of_birth" Type="date" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SNILS" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="actual_address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="registered_address" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Positions">
+          <Key>
+            <PropertyRef Name="id_position" />
+          </Key>
+          <Property Name="id_position" Type="int" Nullable="false" />
+          <Property Name="name_position" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="id_staff" />
+          </Key>
+          <Property Name="id_staff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="date_birth" Type="date" Nullable="false" />
+          <Property Name="SNILS" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="actual_address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="registered_address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_departments" Type="int" Nullable="false" />
+          <Property Name="id_position" Type="int" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "C:\USERS\DENIS\DESKTOP\ТЕХНАРЬ\ДИПЛОМ\CRB_APP_DESIGN-KURSACH\CRB\CRB.MDF.dbo.OtchetPost2024" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="OtchetPost2024">
+          <Key>
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="First_name" />
+            <PropertyRef Name="Patronymic" />
+            <PropertyRef Name="kod_diagnosis" />
+            <PropertyRef Name="name_diagnosis" />
+            <PropertyRef Name="date_receipt" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="id_case" />
+          </Key>
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="First_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kod_diagnosis" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="name_diagnosis" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="date_receipt" Type="date" Nullable="false" />
+          <Property Name="date_discharge" Type="date" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_case" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_beds_hospital_rooms">
+          <End Role="hospital_rooms" Type="Self.hospital_rooms" Multiplicity="1" />
+          <End Role="beds" Type="Self.beds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_rooms">
+              <PropertyRef Name="id_room" />
+            </Principal>
+            <Dependent Role="beds">
+              <PropertyRef Name="id_room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_beds">
+          <End Role="beds" Type="Self.beds" Multiplicity="0..1" />
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="beds">
+              <PropertyRef Name="id_bed" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_bed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Departments">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="id_departments" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_departments" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Outcomes">
+          <End Role="Outcomes" Type="Self.Outcomes" Multiplicity="0..1" />
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outcomes">
+              <PropertyRef Name="id_outcomes" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_outcomes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Patient">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id_patient" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_patient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Staff">
+          <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Staff">
+              <PropertyRef Name="id_staff" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_doctor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MKB_Electronic_medical_card_Electronic_medical_card">
+          <End Role="Electronic_medical_card" Type="Self.Electronic_medical_card" Multiplicity="1" />
+          <End Role="MKB_Electronic_medical_card" Type="Self.MKB_Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Electronic_medical_card">
+              <PropertyRef Name="id_case" />
+            </Principal>
+            <Dependent Role="MKB_Electronic_medical_card">
+              <PropertyRef Name="id_case" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MKB_Electronic_medical_card_MKB">
+          <End Role="MKB" Type="Self.MKB" Multiplicity="1" />
+          <End Role="MKB_Electronic_medical_card" Type="Self.MKB_Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MKB">
+              <PropertyRef Name="kod_diagnosis" />
+            </Principal>
+            <Dependent Role="MKB_Electronic_medical_card">
+              <PropertyRef Name="kod_diagnosis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OMS_policy_Patient">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+          <End Role="OMS_policy" Type="Self.OMS_policy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id_patient" />
+            </Principal>
+            <Dependent Role="OMS_policy">
+              <PropertyRef Name="id_patient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staff_Departments">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="id_departments" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="id_departments" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staff_Positions">
+          <End Role="Positions" Type="Self.Positions" Multiplicity="1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Positions">
+              <PropertyRef Name="id_position" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="id_position" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Хранилище CRBModelContainer">
+          <EntitySet Name="beds" EntityType="Self.beds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Electronic_medical_card" EntityType="Self.Electronic_medical_card" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hospital_rooms" EntityType="Self.hospital_rooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MKB" EntityType="Self.MKB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MKB_Electronic_medical_card" EntityType="Self.MKB_Electronic_medical_card" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OMS_policy" EntityType="Self.OMS_policy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Outcomes" EntityType="Self.Outcomes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OtchetPost2024" EntityType="Self.OtchetPost2024" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OtchetPost2024].[Surname] AS [Surname], 
+    [OtchetPost2024].[First_name] AS [First_name], 
+    [OtchetPost2024].[Patronymic] AS [Patronymic], 
+    [OtchetPost2024].[kod_diagnosis] AS [kod_diagnosis], 
+    [OtchetPost2024].[name_diagnosis] AS [name_diagnosis], 
+    [OtchetPost2024].[date_receipt] AS [date_receipt], 
+    [OtchetPost2024].[date_discharge] AS [date_discharge], 
+    [OtchetPost2024].[name] AS [name], 
+    [OtchetPost2024].[id_case] AS [id_case]
+    FROM [dbo].[OtchetPost2024] AS [OtchetPost2024]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_beds_hospital_rooms" Association="Self.FK_beds_hospital_rooms">
+            <End Role="hospital_rooms" EntitySet="hospital_rooms" />
+            <End Role="beds" EntitySet="beds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_beds" Association="Self.FK_Electronic_medical_card_beds">
+            <End Role="beds" EntitySet="beds" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Departments" Association="Self.FK_Electronic_medical_card_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Outcomes" Association="Self.FK_Electronic_medical_card_Outcomes">
+            <End Role="Outcomes" EntitySet="Outcomes" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Patient" Association="Self.FK_Electronic_medical_card_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Staff" Association="Self.FK_Electronic_medical_card_Staff">
+            <End Role="Staff" EntitySet="Staff" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MKB_Electronic_medical_card_Electronic_medical_card" Association="Self.FK_MKB_Electronic_medical_card_Electronic_medical_card">
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+            <End Role="MKB_Electronic_medical_card" EntitySet="MKB_Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MKB_Electronic_medical_card_MKB" Association="Self.FK_MKB_Electronic_medical_card_MKB">
+            <End Role="MKB" EntitySet="MKB" />
+            <End Role="MKB_Electronic_medical_card" EntitySet="MKB_Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OMS_policy_Patient" Association="Self.FK_OMS_policy_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="OMS_policy" EntitySet="OMS_policy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staff_Departments" Association="Self.FK_Staff_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staff_Positions" Association="Self.FK_Staff_Positions">
+            <End Role="Positions" EntitySet="Positions" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CRBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="CRBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CRBModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CRBModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="beds" EntityType="CRBModel.beds" />
+          <EntitySet Name="Departments" EntityType="CRBModel.Departments" />
+          <EntitySet Name="Electronic_medical_card" EntityType="CRBModel.Electronic_medical_card" />
+          <EntitySet Name="hospital_rooms" EntityType="CRBModel.hospital_rooms" />
+          <EntitySet Name="MKB" EntityType="CRBModel.MKB" />
+          <EntitySet Name="OMS_policy" EntityType="CRBModel.OMS_policy" />
+          <EntitySet Name="Outcomes" EntityType="CRBModel.Outcomes" />
+          <EntitySet Name="Patient" EntityType="CRBModel.Patient" />
+          <EntitySet Name="Positions" EntityType="CRBModel.Positions" />
+          <EntitySet Name="Staff" EntityType="CRBModel.Staff" />
+          <EntitySet Name="OtchetPost2024" EntityType="CRBModel.OtchetPost2024" />
+          <AssociationSet Name="FK_beds_hospital_rooms" Association="CRBModel.FK_beds_hospital_rooms">
+            <End Role="hospital_rooms" EntitySet="hospital_rooms" />
+            <End Role="beds" EntitySet="beds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Departments" Association="CRBModel.FK_Electronic_medical_card_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staff_Departments" Association="CRBModel.FK_Staff_Departments">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Outcomes" Association="CRBModel.FK_Electronic_medical_card_Outcomes">
+            <End Role="Outcomes" EntitySet="Outcomes" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Patient" Association="CRBModel.FK_Electronic_medical_card_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_Staff" Association="CRBModel.FK_Electronic_medical_card_Staff">
+            <End Role="Staff" EntitySet="Staff" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OMS_policy_Patient" Association="CRBModel.FK_OMS_policy_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="OMS_policy" EntitySet="OMS_policy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staff_Positions" Association="CRBModel.FK_Staff_Positions">
+            <End Role="Positions" EntitySet="Positions" />
+            <End Role="Staff" EntitySet="Staff" />
+          </AssociationSet>
+          <AssociationSet Name="MKB_Electronic_medical_card" Association="CRBModel.MKB_Electronic_medical_card">
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+            <End Role="MKB" EntitySet="MKB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Electronic_medical_card_beds" Association="CRBModel.FK_Electronic_medical_card_beds">
+            <End Role="beds" EntitySet="beds" />
+            <End Role="Electronic_medical_card" EntitySet="Electronic_medical_card" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="beds">
+          <Key>
+            <PropertyRef Name="id_bed" />
+          </Key>
+          <Property Name="id_bed" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="num_bed" Type="Int32" Nullable="false" />
+          <Property Name="status_bed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="id_room" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hospital_rooms" Relationship="CRBModel.FK_beds_hospital_rooms" FromRole="beds" ToRole="hospital_rooms" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.FK_Electronic_medical_card_beds" FromRole="beds" ToRole="Electronic_medical_card" />
+        </EntityType>
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="id_departments" />
+          </Key>
+          <Property Name="id_departments" Type="Int32" Nullable="false" />
+          <Property Name="name_departments" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.FK_Electronic_medical_card_Departments" FromRole="Departments" ToRole="Electronic_medical_card" />
+          <NavigationProperty Name="Staff" Relationship="CRBModel.FK_Staff_Departments" FromRole="Departments" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="Electronic_medical_card">
+          <Key>
+            <PropertyRef Name="id_case" />
+          </Key>
+          <Property Name="id_case" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_patient" Type="Int32" Nullable="false" />
+          <Property Name="date_receipt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="date_discharge" Type="DateTime" Precision="0" />
+          <Property Name="id_departments" Type="Int32" />
+          <Property Name="id_doctor" Type="Int32" Nullable="false" />
+          <Property Name="id_outcomes" Type="Int32" />
+          <Property Name="id_bed" Type="Int32" />
+          <NavigationProperty Name="Departments" Relationship="CRBModel.FK_Electronic_medical_card_Departments" FromRole="Electronic_medical_card" ToRole="Departments" />
+          <NavigationProperty Name="Outcomes" Relationship="CRBModel.FK_Electronic_medical_card_Outcomes" FromRole="Electronic_medical_card" ToRole="Outcomes" />
+          <NavigationProperty Name="Patient" Relationship="CRBModel.FK_Electronic_medical_card_Patient" FromRole="Electronic_medical_card" ToRole="Patient" />
+          <NavigationProperty Name="Staff" Relationship="CRBModel.FK_Electronic_medical_card_Staff" FromRole="Electronic_medical_card" ToRole="Staff" />
+          <NavigationProperty Name="MKB" Relationship="CRBModel.MKB_Electronic_medical_card" FromRole="Electronic_medical_card" ToRole="MKB" />
+          <NavigationProperty Name="beds" Relationship="CRBModel.FK_Electronic_medical_card_beds" FromRole="Electronic_medical_card" ToRole="beds" />
+        </EntityType>
+        <EntityType Name="hospital_rooms">
+          <Key>
+            <PropertyRef Name="id_room" />
+          </Key>
+          <Property Name="id_room" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type_room" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="beds" Relationship="CRBModel.FK_beds_hospital_rooms" FromRole="hospital_rooms" ToRole="beds" />
+        </EntityType>
+        <EntityType Name="MKB">
+          <Key>
+            <PropertyRef Name="kod_diagnosis" />
+          </Key>
+          <Property Name="kod_diagnosis" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_diagnosis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.MKB_Electronic_medical_card" FromRole="MKB" ToRole="Electronic_medical_card" />
+        </EntityType>
+        <EntityType Name="OMS_policy">
+          <Key>
+            <PropertyRef Name="id_OMS" />
+          </Key>
+          <Property Name="id_OMS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="insurance_company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="policy_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_patient" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Patient" Relationship="CRBModel.FK_OMS_policy_Patient" FromRole="OMS_policy" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Outcomes">
+          <Key>
+            <PropertyRef Name="id_outcomes" />
+          </Key>
+          <Property Name="id_outcomes" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.FK_Electronic_medical_card_Outcomes" FromRole="Outcomes" ToRole="Electronic_medical_card" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="id_patient" />
+          </Key>
+          <Property Name="id_patient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="First_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patronymic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_of_birth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SNILS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="actual_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="registered_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.FK_Electronic_medical_card_Patient" FromRole="Patient" ToRole="Electronic_medical_card" />
+          <NavigationProperty Name="OMS_policy" Relationship="CRBModel.FK_OMS_policy_Patient" FromRole="Patient" ToRole="OMS_policy" />
+        </EntityType>
+        <EntityType Name="Positions">
+          <Key>
+            <PropertyRef Name="id_position" />
+          </Key>
+          <Property Name="id_position" Type="Int32" Nullable="false" />
+          <Property Name="name_position" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Staff" Relationship="CRBModel.FK_Staff_Positions" FromRole="Positions" ToRole="Staff" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="id_staff" />
+          </Key>
+          <Property Name="id_staff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="first_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="patronymic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_birth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SNILS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="actual_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="registered_address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id_departments" Type="Int32" Nullable="false" />
+          <Property Name="id_position" Type="Int32" Nullable="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Departments" Relationship="CRBModel.FK_Staff_Departments" FromRole="Staff" ToRole="Departments" />
+          <NavigationProperty Name="Electronic_medical_card" Relationship="CRBModel.FK_Electronic_medical_card_Staff" FromRole="Staff" ToRole="Electronic_medical_card" />
+          <NavigationProperty Name="Positions" Relationship="CRBModel.FK_Staff_Positions" FromRole="Staff" ToRole="Positions" />
+        </EntityType>
+        <EntityType Name="OtchetPost2024">
+          <Key>
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="First_name" />
+            <PropertyRef Name="Patronymic" />
+            <PropertyRef Name="kod_diagnosis" />
+            <PropertyRef Name="name_diagnosis" />
+            <PropertyRef Name="date_receipt" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="id_case" />
+          </Key>
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="First_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patronymic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kod_diagnosis" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_diagnosis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date_receipt" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="date_discharge" Type="DateTime" Precision="0" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id_case" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_beds_hospital_rooms">
+          <End Type="CRBModel.hospital_rooms" Role="hospital_rooms" Multiplicity="1" />
+          <End Type="CRBModel.beds" Role="beds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_rooms">
+              <PropertyRef Name="id_room" />
+            </Principal>
+            <Dependent Role="beds">
+              <PropertyRef Name="id_room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Departments">
+          <End Type="CRBModel.Departments" Role="Departments" Multiplicity="0..1" />
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="id_departments" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_departments" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staff_Departments">
+          <End Type="CRBModel.Departments" Role="Departments" Multiplicity="1" />
+          <End Type="CRBModel.Staff" Role="Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="id_departments" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="id_departments" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Outcomes">
+          <End Type="CRBModel.Outcomes" Role="Outcomes" Multiplicity="0..1" />
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Outcomes">
+              <PropertyRef Name="id_outcomes" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_outcomes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Patient">
+          <End Type="CRBModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id_patient" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_patient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Electronic_medical_card_Staff">
+          <End Type="CRBModel.Staff" Role="Staff" Multiplicity="1" />
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Staff">
+              <PropertyRef Name="id_staff" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_doctor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OMS_policy_Patient">
+          <End Type="CRBModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="CRBModel.OMS_policy" Role="OMS_policy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="id_patient" />
+            </Principal>
+            <Dependent Role="OMS_policy">
+              <PropertyRef Name="id_patient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staff_Positions">
+          <End Type="CRBModel.Positions" Role="Positions" Multiplicity="1" />
+          <End Type="CRBModel.Staff" Role="Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Positions">
+              <PropertyRef Name="id_position" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="id_position" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MKB_Electronic_medical_card">
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <End Type="CRBModel.MKB" Role="MKB" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Electronic_medical_card_beds">
+          <End Type="CRBModel.beds" Role="beds" Multiplicity="0..1" />
+          <End Type="CRBModel.Electronic_medical_card" Role="Electronic_medical_card" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="beds">
+              <PropertyRef Name="id_bed" />
+            </Principal>
+            <Dependent Role="Electronic_medical_card">
+              <PropertyRef Name="id_bed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CRBModelContainer" CdmEntityContainer="CRBEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CRBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище CRBModel.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище CRBModel.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище CRBModel.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище CRBModel.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRBModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище CRBModel.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="CRBModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище CRBModel.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище CRBModel.sp_upgraddiagrams" />
+          <EntitySetMapping Name="beds">
+            <EntityTypeMapping TypeName="CRBModel.beds">
+              <MappingFragment StoreEntitySet="beds">
+                <ScalarProperty Name="id_room" ColumnName="id_room" />
+                <ScalarProperty Name="status_bed" ColumnName="status_bed" />
+                <ScalarProperty Name="num_bed" ColumnName="num_bed" />
+                <ScalarProperty Name="id_bed" ColumnName="id_bed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="CRBModel.Departments">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="name_departments" ColumnName="name_departments" />
+                <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Electronic_medical_card">
+            <EntityTypeMapping TypeName="CRBModel.Electronic_medical_card">
+              <MappingFragment StoreEntitySet="Electronic_medical_card">
+                <ScalarProperty Name="id_bed" ColumnName="id_bed" />
+                <ScalarProperty Name="id_outcomes" ColumnName="id_outcomes" />
+                <ScalarProperty Name="id_doctor" ColumnName="id_doctor" />
+                <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+                <ScalarProperty Name="date_discharge" ColumnName="date_discharge" />
+                <ScalarProperty Name="date_receipt" ColumnName="date_receipt" />
+                <ScalarProperty Name="id_patient" ColumnName="id_patient" />
+                <ScalarProperty Name="id_case" ColumnName="id_case" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hospital_rooms">
+            <EntityTypeMapping TypeName="CRBModel.hospital_rooms">
+              <MappingFragment StoreEntitySet="hospital_rooms">
+                <ScalarProperty Name="type_room" ColumnName="type_room" />
+                <ScalarProperty Name="id_room" ColumnName="id_room" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MKB">
+            <EntityTypeMapping TypeName="CRBModel.MKB">
+              <MappingFragment StoreEntitySet="MKB">
+                <ScalarProperty Name="name_diagnosis" ColumnName="name_diagnosis" />
+                <ScalarProperty Name="kod_diagnosis" ColumnName="kod_diagnosis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OMS_policy">
+            <EntityTypeMapping TypeName="CRBModel.OMS_policy">
+              <MappingFragment StoreEntitySet="OMS_policy">
+                <ScalarProperty Name="id_patient" ColumnName="id_patient" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="policy_number" ColumnName="policy_number" />
+                <ScalarProperty Name="insurance_company" ColumnName="insurance_company" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="id_OMS" ColumnName="id_OMS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Outcomes">
+            <EntityTypeMapping TypeName="CRBModel.Outcomes">
+              <MappingFragment StoreEntitySet="Outcomes">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id_outcomes" ColumnName="id_outcomes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patient">
+            <EntityTypeMapping TypeName="CRBModel.Patient">
+              <MappingFragment StoreEntitySet="Patient">
+                <ScalarProperty Name="registered_address" ColumnName="registered_address" />
+                <ScalarProperty Name="actual_address" ColumnName="actual_address" />
+                <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="id_patient" ColumnName="id_patient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="CRBModel.Positions">
+              <MappingFragment StoreEntitySet="Positions">
+                <ScalarProperty Name="name_position" ColumnName="name_position" />
+                <ScalarProperty Name="id_position" ColumnName="id_position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staff">
+            <EntityTypeMapping TypeName="CRBModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="id_position" ColumnName="id_position" />
+                <ScalarProperty Name="id_departments" ColumnName="id_departments" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="registered_address" ColumnName="registered_address" />
+                <ScalarProperty Name="actual_address" ColumnName="actual_address" />
+                <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="id_staff" ColumnName="id_staff" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OtchetPost2024">
+            <EntityTypeMapping TypeName="CRBModel.OtchetPost2024">
+              <MappingFragment StoreEntitySet="OtchetPost2024">
+                <ScalarProperty Name="id_case" ColumnName="id_case" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="date_discharge" ColumnName="date_discharge" />
+                <ScalarProperty Name="date_receipt" ColumnName="date_receipt" />
+                <ScalarProperty Name="name_diagnosis" ColumnName="name_diagnosis" />
+                <ScalarProperty Name="kod_diagnosis" ColumnName="kod_diagnosis" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MKB_Electronic_medical_card" TypeName="CRBModel.MKB_Electronic_medical_card" StoreEntitySet="MKB_Electronic_medical_card">
+            <EndProperty Name="MKB">
+              <ScalarProperty Name="kod_diagnosis" ColumnName="kod_diagnosis" />
+            </EndProperty>
+            <EndProperty Name="Electronic_medical_card">
+              <ScalarProperty Name="id_case" ColumnName="id_case" />
+            </EndProperty>
+          </AssociationSetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
